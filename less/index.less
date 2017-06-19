@@ -1,0 +1,256 @@
+@import "z.less";
+
+
+.reset-sina();//重置样式
+//（1）选定一个屏，以iphone5（ 320 ） 为例
+//（2）把原来写的px单位全改成rem单位 
+//a)设置一个html中的font-size：basic px; (不设置，则默认为16px)
+//b)进行换算。
+//i.原a px   -------> 现： a/basic  rem 
+//ii.为计算方便 ，我们把basic设置为一个好算的值。网页中最小的font-size是12px，所以我们有一个很好算的值10px不能用（因为它小于12），退而求其次，取basic:100px。
+//注意：这里的basic是可以取任意的值（>12）。不一定要取100。
+//
+//（3）把iphone5 中的设置适用到其它的屏上。
+//a)以320中的baisc为基准，去设置其它屏的html中的font-size
+
+
+
+
+
+header{
+    .pl(17);
+    .pr(30);
+    
+    .fs(30);
+    .h(94);
+    .flex_b();
+    a{
+        color:#fff;
+    }
+    
+    h1{
+        .fs(30);
+        .lh(49);
+         a{
+             .d-b(); 
+             .w(208);
+             .h(49);
+            .bg-m("../img/login_img.png",left,center);
+//           background:url(../img/login_img.png) no-repeat left center;
+             .bs(47,49);
+             .pl(56);
+         }  
+     }
+     div{
+         color:#fff;
+     }
+    
+    
+    background-color: #FA3432;
+}
+nav{
+    .h(86);
+    .flex_a();
+    .fs(24);
+    color:#4b4a4a;
+    .current{
+        color:#ff3636
+    }
+}
+
+.slider{
+    .swipe 
+    {
+          overflow: hidden;
+          visibility: hidden;
+          position: relative;
+    }
+    .swipe-wrap 
+    {
+      overflow: hidden;
+      position: relative;
+    }
+    .swipe-wrap > div {
+      float:left;
+      width:100%;
+      position: relative;
+    }
+    img{width: 100%;.h(360);}
+    
+    ul,li{
+        margin: 0;padding:0;list-style: none;
+        }
+    .indirector{
+        position: absolute;
+        .b(17);
+        left:50%;
+        transform: translateX(-50%);
+    }
+    .indirector li{
+        float: left;
+        .w(20);
+        .h(20);
+        .br(10);
+        background-color: #ccc;
+        .m(0,10,0,10);
+        transition:transform .5s;
+    }
+    .indirector li.current{
+        background-color: #fff;
+        transform: scale(1.1);
+    }
+}
+
+.nav{
+    .flex_a();
+    .h(200);
+    background-color: #fff;
+    color:#808080;
+    border-bottom: 1px solid #ccc;
+    .fs(28);
+    .iconfont{
+        display: block;
+        .w(90);.h(90);.lh(90);
+        color:#fff;
+        .br(30);
+        .fs(50);
+        text-align: center;
+        .m(0,0,10,0);
+        .bc();
+    }
+    a{text-align: center;}
+    .icon-suo{background-color: #4099E9;}
+    .icon-jiaruwomen{background-color: #FB6361;}
+    .icon-xinshouzhiyin{background-color: #40C8B0;}
+    .icon-wenhao{background-color: #FFAE28;}
+}
+
+.product{
+    .pl(23);
+    .pr(23);
+    background-color: #f9f9f9;
+    .title{
+        .iconfont{
+            color:red;
+            .fs(30);
+            .mr(20);
+        }
+        .h(95);
+        .lh(95);
+        .flex_b();
+        
+        .fs(30);
+    }
+    .item{
+        .m(0,0,25,0);
+        .h(255);
+        background-color: #fff;
+        border:1px solid #ccc;
+       .p(25,25,25,25);
+       h4{
+           display: flex;
+           span{
+               color:#494848;
+               .fs(28);
+               margin-right: auto;
+           }
+           .icon-money{
+               .fs(24);
+               .w(85);.h(30);color:#fff;.lh(30);text-align: center;
+                background-color:#FFAB37;
+                .mr(10);
+            }
+           .icon-vip{
+               .w(33);.h(30);color:#fff;.lh(30);text-align: center;
+               background-color: #FF7404;}
+       
+       }
+       .data{
+           .flex_b();
+           .m(28,0,0,0);
+           .h(140);
+       }
+       .data1{
+           .m(0,0,0,34);
+           color:#FF7900;
+            .fs(24);
+           em{
+               color:#FB4034;
+                .fs(38);
+           }
+       }
+       .data2{
+           color:#9a9b9c;
+            .fs(30);
+            em{color:#3d3c3c;}
+       }
+       .data3{
+           img{
+               .w(140);
+               .h(140);
+           }
+       }
+    }
+}
+
+.news{
+    background-color: #f9f9f9;
+    .title{
+        .pl(23);
+        .pr(23);
+        .iconfont{
+            color:red;
+            .fs(30);
+            .mr(20);
+        }
+        .h(95);
+        .lh(95);
+        .flex_b();
+        
+        .fs(30);
+    }
+    .newlist{
+        border-top:1px solid #ccc;
+         border-bottom:1px solid #ccc;
+        background-color:#fff;
+        .pl(23);
+        .pr(23);
+        .pt(35);
+        li{
+            .mb(35);
+        }
+        li a>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        li a {
+            display: flex;
+            img{
+                flex: 0 0 auto;
+                .w(110);.h(110);
+                .mr(23);
+
+            }
+            div{
+                .fs(28);
+                flex:1 1 auto;
+                h4{
+                    color:#494848;
+                }
+                .from{
+                    .flex_b();
+                     p{
+                        .ellipsis-basic();
+                      }
+                }
+               
+                
+            }
+        }
+        
+        
+    }
+}
+
+@import "public.less";

@@ -1,0 +1,195 @@
+.fr {
+  float: right;
+}
+html {
+  font-size: 100px;
+}
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+fieldset,
+img {
+  border: none;
+}
+em,
+i {
+  font-style: normal;
+}
+img {
+  display: block;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+ul,
+ol {
+  list-style: none;
+}
+input {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: "SimSun", "宋体";
+}
+input::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+select,
+input {
+  vertical-align: middle;
+}
+select,
+input,
+textarea {
+  font-size: 12px;
+  margin: 0;
+}
+input[type="text"],
+input[type="password"],
+textarea {
+  outline-style: none;
+  -webkit-appearance: none;
+}
+textarea {
+  resize: none;
+}
+input,
+textarea {
+  background: none;
+  border: none;
+}
+table {
+  border-collapse: collapse;
+}
+body {
+  color: #333;
+  font: 12px "SimSun", "宋体", "Arial Narrow", HELVETICA;
+  background: #fff;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+header {
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  color: #fff;
+  font-size: 0.3rem;
+  height: 0.94rem;
+  background-color: #FA3432;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .iconfont {
+  color: #fff;
+  font-size: 0.4rem;
+}
+.funlist {
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  padding-top: 0.2rem;
+  background-color: #f9f9f9;
+  font-size: 0.28rem;
+}
+.funlist li {
+  margin-bottom: 0.27rem;
+}
+.funlist a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 0.58rem;
+}
+.funlist span .iconfont {
+  border-radius: 0.15rem;
+  text-align: center;
+  display: inline-block;
+  width: 0.58rem;
+  height: 0.58rem;
+  font-size: 0.3rem;
+  background-color: #FA9A33;
+  margin-right: 0.21rem;
+  color: #fff;
+}
+.server-info {
+  padding-left: 0.3rem;
+  height: 1.28rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+.server-info .iconfont {
+  width: 0.78rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  color: #fff;
+  font-size: 0.5rem;
+  border-radius: 0.15rem;
+  text-align: center;
+  background-color: #22CFD8;
+  margin-right: 0.28rem;
+}
+.server-info p {
+  font-size: 0.28rem;
+}
+.server-info p em {
+  color: #06A2CE;
+}
+body {
+  font-family: "Microsoft Yahei", "微软雅黑";
+  background-color: #f9f9f9;
+}
+.c3 {
+  color: #ccc;
+}
+footer {
+  background-color: #fff;
+  height: 1.65rem;
+  border-top: 1px solid #ccc;
+  margin-top: 0.23rem;
+  font-size: 0.28rem;
+  padding-top: 0.45rem;
+}
+footer p {
+  text-align: center;
+  color: #494848;
+}
+footer .copyright {
+  margin-top: 0.2rem;
+  color: #9a9b9c;
+  font-size: 0.26rem;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" type="text/css" href="css/detail.css"/>
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+	<title>我的猫-产品详情</title>
+</head>
+<body>
+	<header>
+		<a href="index.html"> <i class="iconfont icon-fanhui"></i> </a>
+		
+		<span>产品详情</span>
+		
+		<i class="iconfont icon-caidan" id="btn_menu"></i>
+	</header>
+	
+	<section class="data">
+		<p class="title">9.2%+0.5%</p>
+		<p class="info">9.7%(0.2%+活动加息0.5%)</p>
+	</section>
+	
+	<section class="date">
+		<span>1000起</span>
+		<span>180天</span>
+	</section>
+	
+	<section class="promise">
+		<div>
+			<span><i class="iconfont icon-book"></i>省级律所法律支持</span>
+			<span>省级律所法律支持</span>
+			<span>省级律所法律支持</span>
+			<span>省级律所法律支持</span>
+		</div>	
+	</section>
+	
+	<section class="process">
+		<div class="bg" id="bg">
+			<div class="front" id="front"></div>
+			<div class="indirector" id="indirector">
+				37%
+			</div>
+			
+		</div>
+		<p>
+			<span>投资<em id="number">37</em>人</span>
+			<span class="fr">剩余可投<em>6230000</em>元</span>
+		</p>
+	</section>
+	
+	
+	
+	<section class="footer">
+		<a href="">收益估算</a>
+		<input type="button"  value="立即投资"/>
+	</section>
+	
+	<div id="mask" class="mask">
+		<div class="links">
+			<a href="index.html"><i class="iconfont icon-wenhao"></i><span>主页</span></a>
+			<a href=""><i class="iconfont icon-suo"></i><span>安全保障</span></a>
+			<a href=""><i class="iconfont icon-jiaruwomen"></i><span>关于我们</span></a>
+			<a href=""><i class="iconfont icon-xinshouzhiyin"></i><span>我要投资</span></a>
+		</div>
+	</div>
+	
+	
+	
+	<script src="js/zepto/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/zepto/event.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/zepto/fx.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/zepto/touch.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//假设进度值是 50%
+		//（1）#front的宽度值是 #bg的宽度的一半
+		//(2) #indirector的位置是什么？
+		//   left = #front的宽度值 - #indirector的宽度/2
+//		
+		$(function(){
+			var currentValue = 90;			        //当前的百分比值
+			$("#number").html(currentValue);        //设置数值
+			$("#indirector").html(currentValue+"%");
+			var bgWidth = $("#bg").width(); //背景的宽度
+			console.info(bgWidth);
+			var newWidth = bgWidth*currentValue / 100;     // 前景的宽度
+			var newLeft = newWidth - $("#indirector").width()/2;	//指示条的位置
+			
+			$("#front").animate({width:newWidth},500);
+			
+			$("#indirector").animate({left:newLeft},500);
+			
+			
+			//这里的tap可能会被触发两次，需要去改touch.js源代码
+			$("#btn_menu").on("tap",function(){
+				//在隐藏和显示这两个情况下，切换
+				console.info("Afs");
+				$("#mask").toggle();
+			})
+		});
+		
+		
+		
+		
+	</script>
+</body>
+</html>

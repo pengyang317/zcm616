@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+	<title>我的猫-主页</title>
+</head>
+<body>
+	<header>
+		<h1>
+			<a href="">我的猫</a>
+		</h1>
+		<div>
+			<a href="">注册</a> | 
+			<a href="">登录</a>
+		</div>
+	</header>
+	<nav>
+		<a href="" class="current">首页</a>
+		<a href="">我要投资</a>
+		<a href="">帐户中心</a>
+	</nav>
+	<section class="slider">
+		<div id='slider' class="swipe ">
+		  <div class='swipe-wrap'>
+		    <div><img src="img/slider1.jpg"/></div>
+		    <div><img src="img/slider2.jpg"/></div>
+		  </div>
+		  <ul class="indirector">
+		  	<li class="current"></li><li></li>
+		  </ul>
+		</div>
+	</section>
+	
+	<section class="nav">
+		<a href=""><i class="iconfont icon-suo"></i><span>安全保障</span></a>
+		<a href=""><i class="iconfont icon-jiaruwomen"></i><span>关于我们</span></a>
+		<a href=""><i class="iconfont icon-xinshouzhiyin"></i><span>新手指引</span></a>
+		<a href="help.html"><i class="iconfont icon-wenhao"></i><span>帮助中心</span></a>
+	</section>
+	
+	<section class="product"> 
+		<div class="title">
+			<div>
+				
+				<h3><i class="iconfont icon-weibiaoti--"></i>热门产品</h3>
+			</div> 
+			<a href="">更多</a>
+		</div>
+		
+		<ul>
+			<li class="item">
+				<h4><span>理财计划1号</span><i class="icon-money">返现金</i><i class="iconfont icon-vip"></i></h4>
+				<div class="data">
+					<div class="data1">
+						<em>9.2%</em>+0.5
+					</div>
+					<div class="data2">
+						<p><em>180</em>天</p>
+						<p>投资期限</p>
+					</div>
+					<div class="data3">
+						<img src="img/62.png" alt="" />
+					</div>
+				</div>
+			</li>
+			<li class="item">
+				<h4><span>理财计划1号</span><i class="icon-money">返现金</i><i class="iconfont icon-vip"></i></h4>
+				<div class="data">
+					<div class="data1">
+						<em>9.2%</em>+0.5
+					</div>
+					<div class="data2">
+						<p><em>180</em>天</p>
+						<p>投资期限</p>
+					</div>
+					<div class="data3">
+						<img src="img/62.png" alt="" />
+					</div>
+				</div>
+			</li>
+			<li class="item">
+				<h4><span>理财计划1号</span><i class="icon-money">返现金</i><i class="iconfont icon-vip"></i></h4>
+				<div class="data">
+					<div class="data1">
+						<em>9.2%</em>+0.5
+					</div>
+					<div class="data2">
+						<p><em>180</em>天</p>
+						<p>投资期限</p>
+					</div>
+					<div class="data3">
+						<img src="img/62.png" alt="" />
+					</div>
+				</div>
+			</li>
+		</ul>
+	</section>
+	
+	
+	<section class="news">
+		<div class="title">
+			<h3><i class="iconfont icon-artboard13"></i>企业动态</h3>
+
+		</div>
+		
+		<ul class="newlist">
+			<li>
+				<a href="">
+					<img src="img/news20170310144045_植树节专享标题.jpg" alt="" />
+					<div>
+						<h4>标题</h4>
+						<div class="from">
+							<p>内容内容内容内容内容容内</p><span>2017-6-14</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="img/news20170310144045_植树节专享标题.jpg" alt="" />
+					<div>
+						<h4>标题</h4>
+						<div class="from">
+							<p>内容内容内容内容内容容内</p><span>2017-6-14</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="img/news20170310144045_植树节专享标题.jpg" alt="" />
+					<div>
+						<h4>标题</h4>
+						<div class="from">
+							<p>内容内容内容内容内容容内</p><span>2017-6-14</span>
+						</div>
+					</div>
+				</a>
+			</li>
+		</ul>
+		
+	</section>
+	
+	<footer>
+		<p class="links">
+			<a href="">触屏版</a> | 
+			<a href="">电脑版</a> | 
+			<a href="">APP下载</a>
+		</p>
+		<p class="copyright">
+			 &copy;版权所有
+		</p>
+	</footer>
+	<script src="js/zepto/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swipe.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+
+		window.mySwipe = Swipe(document.getElementById('slider'),{
+//			auto:2000,
+			continuous :true,
+			callback:function(index,ele){
+				console.info(index,ele);
+				$(".indirector li").removeClass("current").eq(index%2).addClass("current");
+			}
+		});
+		
+
+		
+		
+	</script>
+
+	
+	
+</body>
+</html>
